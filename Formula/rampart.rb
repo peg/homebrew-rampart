@@ -1,17 +1,18 @@
 class Rampart < Formula
-  desc "Policy engine for AI agent tool calls"
+  desc "Open-source firewall for AI agents"
   homepage "https://rampart.sh"
-  url "https://github.com/peg/rampart/archive/refs/tags/v0.1.5.tar.gz"
-  sha256 "65b2026d2d06940772cdcda41de3d9a7763f4011f23c678f30adceb2d77bbdc3"
+  url "https://github.com/peg/rampart/archive/refs/tags/v0.1.14.tar.gz"
+  sha256 "54550816ef2bef8ded6ca6c4eb4db78df60d8b3a1a0569a8718a0b1feba4872c"
   license "Apache-2.0"
 
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-o", bin/"rampart", "./cmd/rampart"
+    ldflags = "-s -w -X github.com/peg/rampart/internal/build.Version=#{version}"
+    system "go", "build", *std_go_args(ldflags:), "./cmd/rampart"
   end
 
   test do
-    assert_match "rampart version", shell_output("#{bin}/rampart version")
+    assert_match version.to_s, shell_output("#{bin}/rampart version")
   end
 end
