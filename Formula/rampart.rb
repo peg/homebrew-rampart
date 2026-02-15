@@ -1,8 +1,8 @@
 class Rampart < Formula
   desc "Open-source firewall for AI agents"
   homepage "https://rampart.sh"
-  url "https://github.com/peg/rampart/archive/refs/tags/v0.1.14.tar.gz"
-  sha256 "54550816ef2bef8ded6ca6c4eb4db78df60d8b3a1a0569a8718a0b1feba4872c"
+  url "https://github.com/peg/rampart/archive/refs/tags/v0.2.22.tar.gz"
+  sha256 "6b85fd124ef7a7e52722f213cac9ba32b668335c92afa64e7054eebfb75844de"
   license "Apache-2.0"
 
   depends_on "go" => :build
