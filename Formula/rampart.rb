@@ -5,21 +5,21 @@
 class Rampart < Formula
   desc "Open-source firewall for AI agents"
   homepage "https://rampart.sh"
-  version "0.3.0"
+  version "0.3.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/peg/rampart/releases/download/v0.3.0/rampart_0.3.0_darwin_amd64.tar.gz"
-      sha256 "9e05fdb0b6fc117afc576f2bbc73f0dd130c4abfa7db8f2d98c94e131113fefb"
+      url "https://github.com/peg/rampart/releases/download/v0.3.1/rampart_0.3.1_darwin_amd64.tar.gz"
+      sha256 "53500fde83b3b2dc1e36d35587f18f6e0d520be1331b676e7fc0c059c186ab4a"
 
       def install
         bin.install "rampart"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/peg/rampart/releases/download/v0.3.0/rampart_0.3.0_darwin_arm64.tar.gz"
-      sha256 "5ad6e97c17943fe1dfcb967b3e248f5d5313e6b3c91301420d53db40cf189bb3"
+      url "https://github.com/peg/rampart/releases/download/v0.3.1/rampart_0.3.1_darwin_arm64.tar.gz"
+      sha256 "879ed53a839e321224c88d64cd2707816491974f916097d9c28e635aa1668b6a"
 
       def install
         bin.install "rampart"
@@ -29,15 +29,15 @@ class Rampart < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peg/rampart/releases/download/v0.3.0/rampart_0.3.0_linux_amd64.tar.gz"
-      sha256 "99a4f92fc256946674793b53a282a935525b41b3e6436b5ce3295f15ce5e73f5"
+      url "https://github.com/peg/rampart/releases/download/v0.3.1/rampart_0.3.1_linux_amd64.tar.gz"
+      sha256 "3a18bd247ddad2f9cd1732a517c7b0820ed4d41798dbe0613d569e3ff2fbe639"
       def install
         bin.install "rampart"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peg/rampart/releases/download/v0.3.0/rampart_0.3.0_linux_arm64.tar.gz"
-      sha256 "84eff4ecab78ee28c2a2469aed57cd13f9e989cbfd5080c7bb77cc735bfa869c"
+      url "https://github.com/peg/rampart/releases/download/v0.3.1/rampart_0.3.1_linux_arm64.tar.gz"
+      sha256 "8ca16b31c2bb2c9b9fe7a40e4eb74da4ed86844713de2eb251fcd138dd83ce6c"
       def install
         bin.install "rampart"
       end
