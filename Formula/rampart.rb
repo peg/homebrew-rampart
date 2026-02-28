@@ -5,21 +5,21 @@
 class Rampart < Formula
   desc "Open-source firewall for AI agents"
   homepage "https://rampart.sh"
-  version "0.6.7"
+  version "0.6.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/peg/rampart/releases/download/v0.6.7/rampart_0.6.7_darwin_amd64.tar.gz"
-      sha256 "48795cbacc6379da8251a83f789f96847dc7195e742c3eb68e9bf35390a8303b"
+      url "https://github.com/peg/rampart/releases/download/v0.6.8/rampart_0.6.8_darwin_amd64.tar.gz"
+      sha256 "dda6b0139ec8c0af62e4f36b337c9e17807a484d13d883f0690c8f5240d70aed"
 
       define_method(:install) do
         bin.install "rampart"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/peg/rampart/releases/download/v0.6.7/rampart_0.6.7_darwin_arm64.tar.gz"
-      sha256 "dc8d17ee54082bd72e760f69b245794ad73107ba13637433655857605749cd5c"
+      url "https://github.com/peg/rampart/releases/download/v0.6.8/rampart_0.6.8_darwin_arm64.tar.gz"
+      sha256 "f464f5950aa3aeb0a6c82dab39b181f1aa0bbe94e86ac1186be86c6f4f57bccc"
 
       define_method(:install) do
         bin.install "rampart"
@@ -29,15 +29,15 @@ class Rampart < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peg/rampart/releases/download/v0.6.7/rampart_0.6.7_linux_amd64.tar.gz"
-      sha256 "5eedb4432547946a6ee93f44deee6b487043131cec6d264e323434d88ac8dcec"
+      url "https://github.com/peg/rampart/releases/download/v0.6.8/rampart_0.6.8_linux_amd64.tar.gz"
+      sha256 "89461598098161440cd3c9047b8f88ae7d4ab3cc8bf3ba6838ad0d6ea7e7f72d"
       define_method(:install) do
         bin.install "rampart"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peg/rampart/releases/download/v0.6.7/rampart_0.6.7_linux_arm64.tar.gz"
-      sha256 "65f56852a07572de7cd669c927632d8d3ef2e45bc10f2ccf16d6cc6ac5a0a4c2"
+      url "https://github.com/peg/rampart/releases/download/v0.6.8/rampart_0.6.8_linux_arm64.tar.gz"
+      sha256 "cfc32079dc6c25d7dc70dd5d3a25c8ca04fd670aae6aab6adbc7edc613ad2e3d"
       define_method(:install) do
         bin.install "rampart"
       end
