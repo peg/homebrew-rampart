@@ -1,8 +1,9 @@
 # Legacy Homebrew Tap for Rampart
 
-This tap is retained so existing `peg/rampart` users continue receiving current
-Rampart releases. New installations should use the canonical `peg/tap` tap,
-which is updated automatically by Rampart's release workflow.
+This tap is retained temporarily for compatibility and currently provides
+Rampart v1.4.0. New installations should use the canonical `peg/tap` tap, which
+is updated automatically by Rampart's release workflow. Future releases are
+only guaranteed there.
 
 ## Installation
 
